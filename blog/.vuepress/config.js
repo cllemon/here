@@ -2,6 +2,7 @@
 module.exports = {
   base: '/ii/',
   title: '木鸢', // Title for the site. This will be displayed in the navbar.
+  description: "Web development, Frontend, JavaScript, TypeScript",
   theme: '@vuepress/theme-blog',
   themeConfig: {
     smoothScroll: true,
@@ -55,6 +56,18 @@ module.exports = {
     },
     globalPagination: {
       lengthPerPage: 20,
+    },
+    sitemap: {
+      hostname: "https://cllemon.github.io/ii/"
+    },
+    comment: {
+      service: "vssue",
+      autoCreateIssue: true,
+      prefix: "[Post]",
+      owner: "cllemon",
+      repo: "ii",
+      clientId: "77ee671f2494abd9505e",
+      clientSecret: "39104cb3d8856b8cf5c4a344661729607eff715b"
     },
   },
 }

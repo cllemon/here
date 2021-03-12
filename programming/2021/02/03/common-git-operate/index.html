@@ -8,7 +8,7 @@
     
     <meta name="description" content="Git 的一些常见命令使用与记录">
     
-    <link rel="preload" href="/ii/assets/css/0.styles.434871eb.css" as="style"><link rel="preload" href="/ii/assets/js/app.86481a9c.js" as="script"><link rel="preload" href="/ii/assets/js/6.59ff5658.js" as="script"><link rel="preload" href="/ii/assets/js/3.acad2ff0.js" as="script"><link rel="preload" href="/ii/assets/js/23.43bd5a28.js" as="script"><link rel="prefetch" href="/ii/assets/js/10.191c456d.js"><link rel="prefetch" href="/ii/assets/js/11.67095f32.js"><link rel="prefetch" href="/ii/assets/js/12.b6b7c46e.js"><link rel="prefetch" href="/ii/assets/js/13.60520aeb.js"><link rel="prefetch" href="/ii/assets/js/14.92e1b726.js"><link rel="prefetch" href="/ii/assets/js/15.3ecdb778.js"><link rel="prefetch" href="/ii/assets/js/16.c48953f4.js"><link rel="prefetch" href="/ii/assets/js/17.d1ea2822.js"><link rel="prefetch" href="/ii/assets/js/18.952d6cfe.js"><link rel="prefetch" href="/ii/assets/js/19.241357be.js"><link rel="prefetch" href="/ii/assets/js/20.981a560a.js"><link rel="prefetch" href="/ii/assets/js/21.9f944592.js"><link rel="prefetch" href="/ii/assets/js/22.cfd2c47b.js"><link rel="prefetch" href="/ii/assets/js/4.357e4669.js"><link rel="prefetch" href="/ii/assets/js/5.5bf2c7b1.js"><link rel="prefetch" href="/ii/assets/js/7.d461fbb9.js"><link rel="prefetch" href="/ii/assets/js/8.d03b169a.js"><link rel="prefetch" href="/ii/assets/js/9.d5d4f491.js"><link rel="prefetch" href="/ii/assets/js/vuejs-paginate.6ea3ec55.js">
+    <link rel="preload" href="/ii/assets/css/0.styles.434871eb.css" as="style"><link rel="preload" href="/ii/assets/js/app.008e36dd.js" as="script"><link rel="preload" href="/ii/assets/js/6.59ff5658.js" as="script"><link rel="preload" href="/ii/assets/js/3.acad2ff0.js" as="script"><link rel="preload" href="/ii/assets/js/23.0b4621d3.js" as="script"><link rel="prefetch" href="/ii/assets/js/10.191c456d.js"><link rel="prefetch" href="/ii/assets/js/11.67095f32.js"><link rel="prefetch" href="/ii/assets/js/12.b6b7c46e.js"><link rel="prefetch" href="/ii/assets/js/13.60520aeb.js"><link rel="prefetch" href="/ii/assets/js/14.92e1b726.js"><link rel="prefetch" href="/ii/assets/js/15.3ecdb778.js"><link rel="prefetch" href="/ii/assets/js/16.c48953f4.js"><link rel="prefetch" href="/ii/assets/js/17.d1ea2822.js"><link rel="prefetch" href="/ii/assets/js/18.952d6cfe.js"><link rel="prefetch" href="/ii/assets/js/19.241357be.js"><link rel="prefetch" href="/ii/assets/js/20.981a560a.js"><link rel="prefetch" href="/ii/assets/js/21.9f944592.js"><link rel="prefetch" href="/ii/assets/js/22.cfd2c47b.js"><link rel="prefetch" href="/ii/assets/js/4.357e4669.js"><link rel="prefetch" href="/ii/assets/js/5.5bf2c7b1.js"><link rel="prefetch" href="/ii/assets/js/7.d461fbb9.js"><link rel="prefetch" href="/ii/assets/js/8.d03b169a.js"><link rel="prefetch" href="/ii/assets/js/9.d5d4f491.js"><link rel="prefetch" href="/ii/assets/js/vuejs-paginate.6ea3ec55.js">
     <link rel="stylesheet" href="/ii/assets/css/0.styles.434871eb.css">
   </head>
   <body>
@@ -78,15 +78,15 @@ Working Directory        Stage             Commit History          Remote
         <span class="token punctuation">..</span>.
 
 <span class="token punctuation">[</span>user<span class="token punctuation">]</span>
-        name <span class="token operator">=</span> kite_special
-        email <span class="token operator">=</span> kite.special@gmail.com
+        name <span class="token operator">=</span> kite_local_project
+        email <span class="token operator">=</span> kite.local.project@gmail.com
 </code></pre></div><h3 id="全局配置"><a href="#全局配置" class="header-anchor">#</a> 全局配置</h3> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 查看全局配置</span>
 ~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> config --global -l
 
 <span class="token comment"># 添加一些全局配置</span>
 ~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> config --local  user.name <span class="token string">&quot;kite&quot;</span>
 
-<span class="token comment"># 或直接编辑 ~/.gitconfig (👇 下面配置一些常用配置 👇)</span>
+<span class="token comment"># 或直接编辑 ~/.gitconfig (👇 下面是一些简单的常用配置 👇)</span>
 ~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">vi</span> ~/.gitconfig
 
 <span class="token punctuation">[</span>core<span class="token punctuation">]</span>
@@ -100,7 +100,8 @@ Working Directory        Stage             Commit History          Remote
         s <span class="token operator">=</span> status
         l <span class="token operator">=</span> log --graph
         ct <span class="token operator">=</span> commit -m
-</code></pre></div><h2 id="多人开发"><a href="#多人开发" class="header-anchor">#</a> 多人开发</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">####################################################################</span>
+        co <span class="token operator">=</span> checkout
+</code></pre></div><h2 id="多人协作开发"><a href="#多人协作开发" class="header-anchor">#</a> 多人协作开发</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">####################################################################</span>
 <span class="token comment">##    多个人开发同一个项目，最终将修改的代码 合并 到同一个主分支 master     ##</span>
 <span class="token comment">####################################################################</span>
 
@@ -109,35 +110,35 @@ Working Directory        Stage             Commit History          Remote
 ****************
 
 <span class="token comment"># 在开发新功能前，首先拉代码，保持本地和远程仓库代码同步</span>
-~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> pull
+~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> pull <span class="token comment"># 若本地原先没有使用 git clone 将代码克隆到本地</span>
 
 <span class="token comment"># 创建一个自己的开发分支 (从当前最新的节点开始) 并切过去</span>
-~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> checkout -b kite_dev
-Switched to a new branch <span class="token string">'kite_dev'</span>
+~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> co -b dev
+Switched to a new branch <span class="token string">'dev'</span>
 
 ------------------------------------------------------------------------------------
 <span class="token comment"># 或者 从某一次提交开始创建新的分支（若需要的话）</span>
 ~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> log --graph <span class="token comment"># 查看提交历史，选取所需开始的 commit ID</span>
-~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> checkout 45b904 -b kite_dev
+~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> co 45b904 -b dev
 ------------------------------------------------------------------------------------
 
 <span class="token comment"># 同步本地分支到远程仓库</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> push origin kite_dev:kite_dev
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> push origin dev:dev
 <span class="token comment"># 建立与上游分支的联系</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> push --set-upstream origin kite_dev
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> push --set-upstream origin dev
 
 <span class="token comment"># balala 开始开发一个功能模块，过程中可能在本地提交了多次小的改动，比如这样</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块 -- 子功能1'</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块 -- 子功能2'</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块 -- 子功能3'</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块 -- 子功能4'</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块全部完成'</span>
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块 -- 子功能1'</span>
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块 -- 子功能2'</span>
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块 -- 子功能3'</span>
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块 -- 子功能4'</span>
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'feat: 完成功能模块 -- 完成收尾'</span>
 
 <span class="token comment"># 终于，完成了功能模块的开发，开始提交代码到远程仓库</span>
 <span class="token comment"># 老规矩，在提交代码前先拉代码（保证本地与远程同步）</span>
 
 <span class="token comment"># 先切回本地分支 master 分支 并 拉取远程最新的代码 (可能没有最新)</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> checkout master
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> co master
 ~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> pull
 
 --------------------------------------------------------------------------------
@@ -147,41 +148,69 @@ Switched to a new branch <span class="token string">'kite_dev'</span>
 ~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'fix xxx conflict'</span>
 --------------------------------------------------------------------------------
 
-<span class="token comment"># 将主分支 master 上的内容合并到 kite_dev 分支上</span>
-<span class="token comment"># 首先，切换回 kite_dev 分支</span>
-~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> :git checkout kite_dev
+<span class="token comment"># 将主分支 master 上的内容合并到 dev 分支上</span>
+<span class="token comment"># 首先，切换回 dev 分支</span>
+~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span> :git co dev
 
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> :git merge master
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> :git merge master
 
 --------------------------------------------------------------------------------
 <span class="token comment"># 合并可能会有冲突，如果有冲突，解决冲突解决流程如下 👇</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span> <span class="token comment"># 解决完冲突后，将存在的文件变更添加到暂存区</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">'Merge master to kite_dev'</span>
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span> <span class="token comment"># 解决完冲突后，将存在的文件变更添加到暂存区</span>
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> ct <span class="token string">&quot;'Merge branch 'master' into 'dev'&quot;</span>
 --------------------------------------------------------------------------------
 
-<span class="token comment"># 保持同步之后，将 kite_dev 分支上开发的功能（提交了多次 commit）合并到远程 master 分支</span>
-<span class="token comment"># 合并之前，由于之前提交了很多零散的 commit，但实际上这部分代码提交，只是某个功能模块，</span>
-<span class="token comment"># 为了保证提交日志历史干净，我们将 kite_dev 分支的 commit 进行合并</span>
-<span class="token comment"># 如这里是：将 “feat: 完成功能模块 -- 子功能1、子功能2、子功能3、子功能4、全部完成 ”</span>
+<span class="token comment"># 保持同步之后，将 dev 分支上开发的功能（提交了多次 commit）合并到远程 master 分支</span>
+<span class="token comment"># 合并之前，由于之前提交了很多零散的 commit，但实际上这部分代码提交只是某个功能模块相关，</span>
+<span class="token comment"># 为了保证提交日志历史干净，我们将 dev 分支的 commit 进行合并</span>
+<span class="token comment"># 如这里是：将 “feat: 完成功能模块 -- 子功能1、子功能2、子功能3、子功能4、完成收尾 ”</span>
 <span class="token comment">#         合并为一条日志信息 “xxx功能模块开发完成”</span>
 <span class="token comment"># 合并多条 commit</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> rebase -i
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> rebase -i
 
 --------------------------------------------------------------------------------
-<span class="token comment"># 将 pick -&gt; s</span>
+pick feat: 完成功能模块 -- 子功能1
+pick feat: 完成功能模块 -- 子功能1
+pick feat: 完成功能模块 -- 子功能1
+pick feat: 完成功能模块 -- 子功能1
+pick feat: 完成功能模块全部完成
+
+<span class="token comment"># Commands:</span>
+<span class="token comment"># p, pick &lt;commit&gt; = use commit</span>
+<span class="token comment"># r, reword &lt;commit&gt; = use commit, but edit the commit message</span>
+<span class="token comment"># e, edit &lt;commit&gt; = use commit, but stop for amending</span>
+<span class="token comment"># s, squash &lt;commit&gt; = use commit, but meld into previous commit</span>
+<span class="token comment"># f, fixup &lt;commit&gt; = like &quot;squash&quot;, but discard this commit's log message</span>
+<span class="token comment"># x, exec &lt;command&gt; = run command (the rest of the line) using shell</span>
+<span class="token comment"># b, break = stop here (continue rebase later with 'git rebase --continue')</span>
+<span class="token comment"># d, drop &lt;commit&gt; = remove commit</span>
+<span class="token comment"># l, label &lt;label&gt; = label current HEAD with a name</span>
+<span class="token comment"># t, reset &lt;label&gt; = reset HEAD to a label</span>
+<span class="token comment"># m, merge [-C &lt;commit&gt; | -c &lt;commit&gt;] &lt;label&gt; [# &lt;oneline&gt;]</span>
+<span class="token comment"># .       create a merge commit using the original merge commit's</span>
+<span class="token comment"># .       message (or the oneline, if no original merge commit was</span>
+<span class="token comment"># .       specified). Use -c &lt;commit&gt; to reword the commit message.</span>
+<span class="token comment">#</span>
+<span class="token comment"># These lines can be re-ordered; they are executed from top to bottom.</span>
+<span class="token comment">#</span>
+<span class="token comment"># If you remove a line here THAT COMMIT WILL BE LOST.</span>
+
+<span class="token string">&quot;将 pick -&gt; s 保存即可&quot;</span>
 <span class="token comment"># 若有冲突，解决冲突，然后添加到暂存区</span>
+
+<span class="token comment"># 注：若要取消 rebase 执行 git rebase --abort</span>
 --------------------------------------------------------------------------------
 
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> rebase --continue
+<span class="token comment"># 继续 rebase</span>
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> rebase --continue
 
-<span class="token comment"># 取消 rebase</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> :git rebase --abort
+<span class="token comment"># 切回 主分支</span>
+~/project <span class="token punctuation">[</span>dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> co master
 
-<span class="token comment"># 合并操作</span>
-~/project <span class="token punctuation">[</span>kite_dev ±<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token function">git</span> checkout master
+<span class="token comment"># 将 dev 开发的内容合并到主分支 master 上</span>
+~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span>: <span class="token function">git</span> merge dev <span class="token comment"># Merge branch 'dev' into 'master'</span>
 
-~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span>: <span class="token function">git</span> merge kite
-
+<span class="token comment"># 查看状态</span>
 ~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span>: <span class="token function">git</span> status
 
 On branch master
@@ -190,12 +219,13 @@ Your branch is ahead of <span class="token string">'origin/master'</span> by <sp
 
 nothing to commit, working tree clean
 
+<span class="token comment"># 将 merge 的内容推送到远程仓库</span>
 ~/project <span class="token punctuation">[</span>master ±<span class="token punctuation">]</span>: <span class="token function">git</span> push
-</code></pre></div><h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <ul><li><a href="https://backlog.com/git-tutorial/tw/intro/intro1_1.html" target="_blank" rel="noopener noreferrer">猴子老師 git tutorial<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://zlargon.gitbooks.io/git-tutorial/content/" target="_blank" rel="noopener noreferrer">git tutorial<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#分区概念简述" title="分区概念简述">分区概念简述</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#基本操作" title="基本操作">基本操作</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#git-配置" title="Git 配置">Git 配置</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#本地项目配置" title="本地项目配置">本地项目配置</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#全局配置" title="全局配置">全局配置</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#多人开发" title="多人开发">多人开发</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#参考" title="参考">参考</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8><li class="contact-item" data-v-3d9deeb8><a href="https://github.com/cllemon" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-3d9deeb8><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-3d9deeb8><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-3d9deeb8></path></svg>
+</code></pre></div><h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <ul><li><a href="https://backlog.com/git-tutorial/tw/intro/intro1_1.html" target="_blank" rel="noopener noreferrer">連猴子都能懂的 Git 入門指南<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/zlargon/git-tutorial" target="_blank" rel="noopener noreferrer">zlargon/git-tutorial<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <br> <hr> <p><em>文章写于 <strong>2017 年 11 月</strong> 迁移于 <strong>2021 年 02 月</strong></em></p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#分区概念简述" title="分区概念简述">分区概念简述</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#基本操作" title="基本操作">基本操作</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#git-配置" title="Git 配置">Git 配置</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#本地项目配置" title="本地项目配置">本地项目配置</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#全局配置" title="全局配置">全局配置</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#多人协作开发" title="多人协作开发">多人协作开发</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#参考" title="参考">参考</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8><li class="contact-item" data-v-3d9deeb8><a href="https://github.com/cllemon" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-3d9deeb8><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-3d9deeb8><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-3d9deeb8></path></svg>
           
         </a></li><li class="contact-item" data-v-3d9deeb8><a href="mailto:hnx.lemon@gmail.com" class="nav-link external" data-v-3d9deeb8><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail" data-v-3d9deeb8><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" data-v-3d9deeb8></path><polyline points="22,6 12,13 2,6" data-v-3d9deeb8></polyline></svg>
           
         </a></li></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8><li class="copyright-item" data-v-3d9deeb8>Powered by VuePress | Wooden Kite © 2017 - Present </li></ul></div></footer></div><div class="global-ui"></div></div>
-    <script src="/ii/assets/js/app.86481a9c.js" defer></script><script src="/ii/assets/js/6.59ff5658.js" defer></script><script src="/ii/assets/js/3.acad2ff0.js" defer></script><script src="/ii/assets/js/23.43bd5a28.js" defer></script>
+    <script src="/ii/assets/js/app.008e36dd.js" defer></script><script src="/ii/assets/js/6.59ff5658.js" defer></script><script src="/ii/assets/js/3.acad2ff0.js" defer></script><script src="/ii/assets/js/23.0b4621d3.js" defer></script>
   </body>
 </html>

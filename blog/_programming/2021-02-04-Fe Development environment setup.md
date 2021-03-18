@@ -1,7 +1,7 @@
 ---
 title: 开发环境的配置和搭建
 summary: 记录平常工作中需要用到的一些工具、环境配置等（ FE + Mac ）
-date: 2021-02-04
+date: 2017-11-16
 author: Wooden Kite
 location: HuaiNan.AnHui
 ---
@@ -247,3 +247,8 @@ Npm 源管理器，[安装](https://github.com/Pana/nrm#install)，[使用](http
 - [网易有道词 ‪ 典](https://apps.apple.com/cn/app/you-dao-ci-dian/id491854842?mt=12)
 - [Google 翻译](https://github.com/MoeFE/GoogleTranslate/releases/tag/v2.0.0-beta.2)
 - [搜狗输入法](https://pinyin.sogou.com/mac/?r=pinyin)
+
+<br>
+<hr>
+
+_文章写于 **2017 年 11 月** 迁移修饰于 **2021 年 02 月**_

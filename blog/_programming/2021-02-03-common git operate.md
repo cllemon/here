@@ -1,7 +1,7 @@
 ---
 title: 经常用到的 Git 命令
 summary: Git 的一些常见命令使用与记录
-date: 2021-02-03
+date: 2017-11-02
 author: Wooden Kite
 location: HuaiNan.AnHui
 ---
@@ -218,9 +218,9 @@ nothing to commit, working tree clean
 
 - [連猴子都能懂的 Git 入門指南](https://backlog.com/git-tutorial/tw/intro/intro1_1.html)
 - [zlargon/git-tutorial](https://github.com/zlargon/git-tutorial)
-<!-- https://stackoverflow.com/questions/37770467/why-do-i-have-to-git-push-set-upstream-origin-branch -->
+  <!-- https://stackoverflow.com/questions/37770467/why-do-i-have-to-git-push-set-upstream-origin-branch -->
 
 <br>
 <hr>
 
-_文章写于 **2017 年 11 月** 迁移于 **2021 年 02 月**_
+_文章写于 **2017 年 11 月** 迁移修饰于 **2021 年 02 月**_
